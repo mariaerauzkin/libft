@@ -6,13 +6,13 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 15:02:52 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/19 15:02:58 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:41:01 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(char *str)
+int ft_isalnum(int str)
 {
 	int i;
 
