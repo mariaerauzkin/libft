@@ -6,7 +6,7 @@
 #    By: marierau <marierau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 11:26:24 by marierau          #+#    #+#              #
-#    Updated: 2023/04/24 15:12:28 by marierau         ###   ########.fr        #
+#    Updated: 2023/04/25 15:43:37 by marierau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
-ft_strlen.c ft_memset.c
+ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c
 
 OBJS = ${SRCS:.c=.o}
 

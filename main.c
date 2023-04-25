@@ -6,12 +6,13 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/24 16:02:42 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/25 15:56:35 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <strings.h>
 
 int	main(void)
 {
@@ -21,8 +22,8 @@ int	main(void)
 	int	d;
 	int	e;
 	char *str;
-	char	txt [7];//= "MOLA"; y sustituye el nº de bytes que le digamos al size_t
-
+	char	txt [7] = "Mola";
+	
 	str = "42 Urduliz";
 	a = 'M';
 	b = 'z';
@@ -74,12 +75,23 @@ int	main(void)
 	printf("\n");
 	printf("-----------------MEMSET----------------------");
 	printf("\n");
-	printf ("%s\n", ft_memset(txt, '0', 8));
+	printf ("Txt original: %s\n", txt);
+	printf ("1 byte cambiado: %s\n", ft_memset(txt, 'H', 1));
+	printf ("4 bytes cambiados: %s\n", ft_memset(txt, 'H', 4));
 	printf("\n");
-	printf("-----------------MEMMOVE----------------------");
+	printf("-----------------BZERO----------------------");
 	printf("\n");
-	printf ("%s\n", ft_memset(txt, '0', 2));
+	printf ("Txt cogido de memset es: %s\n", txt);
+	ft_bzero(txt, 4);
+	printf("txt despues:%s\n", txt);
 	printf("\n");
-	
+	printf("\n");
+	printf("-------------------MEMCPY-------------------------");
+	printf("\n");
+	printf ("Txt cogido de memset es: %s\n", txt);
+	ft_bzero(txt, 4);
+	printf("txt despues:%s\n", txt);
+	printf("\n");
+	printf("\n");
 }
 
