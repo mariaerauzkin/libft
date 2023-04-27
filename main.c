@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/25 15:56:35 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/27 11:57:31 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,14 @@ int	main(void)
 	printf("\n");
 	printf("-------------------MEMCPY-------------------------");
 	printf("\n");
-	printf ("Txt cogido de memset es: %s\n", txt);
-	ft_bzero(txt, 4);
-	printf("txt despues:%s\n", txt);
+	printf("\nfalta que va con malloc y ni idea");
 	printf("\n");
 	printf("\n");
+	printf("-------------------MEMMOVE-------------------------");
+	printf("\n");
+	printf("\nIDEM ANTERIOR");
+	printf("\n");
+	printf("\n");
+	
 }
 
