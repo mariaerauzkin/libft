@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:57:52 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/27 16:53:36 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/27 18:49:39 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	while (ind < len)
 	{
 		dstcpy[ind] = srccpy[ind];
-		ind++;mn strlcpu
+		ind++;
 	}
 	return (dstcpy);
 }

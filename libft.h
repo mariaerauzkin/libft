@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:50:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/27 17:02:20 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:06:52 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,9 @@ void	ft_bzero(void *pos, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dest, char *src, unsigned int dstsize);
+int	    ft_tolower(int char);
+
+
 
 #endif

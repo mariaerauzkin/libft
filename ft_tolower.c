@@ -6,7 +6,15 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:12:14 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/27 17:12:15 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:14:14 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_tolower(int str)
+{
+	if (str >= 'A' && str <= 'Z')
+		return (str + 32);
+	return (str);
+}

@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 16:57:16 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/27 17:20:43 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/27 18:46:59 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	ind;
-	size_t	j;
+	size_t	inds;
+	size_t	indd;
 
-	ind = 0;
-	j = 0;
-	while (src[ind] != '\0')
-		ind++;
+	inds = 0;
+	indd = 0;
+	while (src[inds] != '\0')
+		inds++;
 	if (dstsize == 0)
-		return (ind);
-	while (src[j] != '\0' && j < dstsize - 1)
+		return (inds);
+	while (src[indd] != '\0' && indd < dstsize - 1)
 	{
-		dst[j] = src[j];
-		j++;
+		dst[indd] = src[indd];
+		indd++;
 	}
-	dst[j] = '\0';
-	return (ind);
+	dst[indd] = '\0';
+	return (inds);
 }
