@@ -6,7 +6,7 @@
 #    By: marierau <marierau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 11:26:24 by marierau          #+#    #+#              #
-#    Updated: 2023/04/25 15:43:37 by marierau         ###   ########.fr        #
+#    Updated: 2023/04/27 16:59:02 by marierau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,19 @@ NAME 	= libft.a
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
-ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c
-
+SRCS =	ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcpy.c \
+		
+		
 OBJS = ${SRCS:.c=.o}
 
 $(NAME): ${OBJS}
