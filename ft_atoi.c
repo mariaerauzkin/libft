@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 15:15:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 16:56:43 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 17:58:07 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ int	ft_atoi(const char *str)
 	digit = 0;
 	while ((str[ind] >= '\t' && str[ind] <= '\r') || str[ind] == ' ')
 		ind++;
-	while (str[ind] == '+' || str[ind] == '-')
+	if (str[ind] == '-')
 	{
-		if (str[ind] == '-')
-			sign *= -1;
-		ind++;
+		sign *= -1;
+			ind++;
 	}
+	else if (str[ind] == '+')
+		ind++;
 	while (str[ind] >= '0' && str[ind] <= '9')
 	{
 		digit = (str[ind] - '0') + (digit * 10);

@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:01:48 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 16:30:48 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:35:02 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,4 @@ char	*ft_strchr(const char *str, int c)
 		return (&strg[ind]);
 	return (NULL);
 }
-/*
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	const char	str[] = "42 urduliz";
-	int			c;
-	c = 'm' + 1024;
-	printf("Funcion original:     %s\n", strchr(str, c));
-	printf("Funcion propio hecho: %s\n", ft_strchr(str, c));
-	return (0);
-}
-*/
+
