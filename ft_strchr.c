@@ -6,14 +6,11 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:01:48 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 16:02:01 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:30:48 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -33,6 +30,9 @@ char	*ft_strchr(const char *str, int c)
 	return (NULL);
 }
 /*
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
 	const char	str[] = "42 urduliz";
