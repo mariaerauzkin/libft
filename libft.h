@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:50:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/27 19:34:31 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:56:09 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-int	    ft_tolower(int str);
-int	    ft_toupper(int str);
-
-
+int		ft_tolower(int str);
+int		ft_toupper(int str);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr( const char *str, int c );
+int		ft_strncmp(const char *str1, const char *str2, size_t len);
+void	*ft_memchr(const void *str, int c, size_t len);
+int		ft_memcmp(const void *str1, const void *str2, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *str);
 
 #endif

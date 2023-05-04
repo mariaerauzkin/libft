@@ -6,7 +6,7 @@
 #    By: marierau <marierau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 11:26:24 by marierau          #+#    #+#              #
-#    Updated: 2023/04/27 19:35:00 by marierau         ###   ########.fr        #
+#    Updated: 2023/05/04 16:57:08 by marierau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,13 @@ SRCS =	ft_isalnum.c \
 		ft_strlcat.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
 		
 OBJS = ${SRCS:.c=.o}
 
@@ -41,9 +48,4 @@ clean:
 fclean:	clean
 	${RM} ${NAME}		
 re: fclean all
-
- 
-
-
-
 
