@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:01:48 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 18:35:02 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:39:39 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*ft_strchr(const char *str, int c)
 		return (&strg[ind]);
 	return (NULL);
 }
-

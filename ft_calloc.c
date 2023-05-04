@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 16:04:45 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 20:54:58 by marierau         ###   ########.fr       */
+/*   Created: 2023/05/04 21:33:13 by marierau          #+#    #+#             */
+/*   Updated: 2023/05/04 22:15:27 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t len)
+void	*ft_calloc(size_t nmbrels, size_t elssize)
 {
-	size_t	ind;
+	void	*dest;
 
-	ind = 0;
-	while (ind < len && (str1[ind] != '\0' || str2[ind] != '\0'))
+	dest = malloc(elssize * nmbrels);
+	if (!dest)
 	{
-		if (str1[ind] != str2[ind])
-		{
-			return ((unsigned char)str1[ind] - (unsigned char)str2[ind]);
-		}
-		ind++;
+		return (NULL);
 	}
-	return (0);
+	ft_bzero(dest, nmbrels * elssize);
+	return (dest);
 }

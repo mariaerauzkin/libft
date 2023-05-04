@@ -6,28 +6,29 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:06:44 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 16:53:37 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 21:01:54 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t len)
+int	ft_bytecmp(const unsigned char *str1, const unsigned char *str2, size_t len)
 {
-	size_t			ind;
-	unsigned char	*strg1;
-	unsigned char	*strg2;
+	size_t	ind;
 
-	strg1 = (unsigned char *)str1;
-	strg2 = (unsigned char *)str2;
 	ind = 0;
-	while (ind < len)
+	while ((ind < len))
 	{
-		if (*strg1 != *strg2)
-			return (*strg1 - *strg2);
+		if (str1[ind] != str2[ind])
+		{
+			return (str1[ind] - str2[ind]);
+		}
 		ind++;
-		strg1++;
-		strg2++;
 	}
 	return (0);
+}
+
+int	ft_memcmp(const void *str1, const void *str2, size_t len)
+{
+	return (ft_bytecmp(str1, str2, len));
 }

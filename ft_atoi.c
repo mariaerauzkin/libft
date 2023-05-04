@@ -6,12 +6,11 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 15:15:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 17:58:07 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:13:05 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<unistd.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -40,7 +39,7 @@ int	ft_atoi(const char *str)
 }
 
 /*
-int		main(void)
+int		main(void)	
 {
 	printf("%d\n", ft_atoi("      	---+--+2147--+-ab567"));
 	printf("%d\n", ft_atoi(" -2147483648"));
