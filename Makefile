@@ -6,7 +6,7 @@
 #    By: marierau <marierau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 11:26:24 by marierau          #+#    #+#              #
-#    Updated: 2023/04/27 16:59:02 by marierau         ###   ########.fr        #
+#    Updated: 2023/04/27 19:35:00 by marierau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ SRCS =	ft_isalnum.c \
 		ft_memcpy.c \
 		ft_memmove.c \
 		ft_strlcpy.c \
-		
+		ft_strlcat.c \
+		ft_tolower.c \
+		ft_toupper.c \
 		
 OBJS = ${SRCS:.c=.o}
 
