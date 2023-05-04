@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/04/27 19:20:34 by marierau         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:44:55 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,19 +107,13 @@ int	main(void)
 	printf("\n");
 	printf("\n");
 	printf("-----------------TOLOWER----------------------");
-	printf("\nM: %d", ft_tolower(a));
-	printf("\nz: %d", ft_tolower(b));
-	printf("\n2: %d", ft_tolower(c));
-	printf("\n : %d", ft_tolower(d));
 	printf("\n");
+	printf("\nM: %c", ft_tolower(a));
 	printf("\n");
 	printf("-----------------TOUPPER----------------------");
-	printf("\nM: %d", ft_toupper(a));
-	printf("\nz: %d", ft_toupper(b));
-	printf("\n2: %d", ft_toupper(c));
-	printf("\n : %d", ft_toupper(d));
 	printf("\n");
+	printf("\nz: %c", ft_toupper(b));
 	printf("\n");
-	
+
 }
 
