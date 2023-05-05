@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:50:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 22:10:39 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:56:42 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		ft_memcmp(const void *str1, const void *str2, size_t len);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *sorg);
 
 #endif
