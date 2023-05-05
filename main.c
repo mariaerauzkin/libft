@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 21:28:47 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:12:23 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@ int	main(void)
 	char	txt1 [20] = "mola";
 	char	txt2 [20] = "molar";
 	int		result;
-	int		tofind;
-	void	*result2;
-	
+	char	big[] = "Esto es 42 Urduliz, may the 4th be with U";
+    char	little1[] = "42";
+    char	little2[] = "may";
+    char	*result1;
+    char	*result2;
 	
 	str = "42 Urduliz 42";
 	a = 'M';
@@ -187,7 +189,10 @@ int	main(void)
 	printf("------------------------------STRNSTR----------------------");
 	printf("\n");
 	printf("\n");
-	printf("\n");
+	result1 = ft_strnstr(big, little1, sizeof(big));
+    result2 = ft_strnstr(big, little2, sizeof(big));
+    printf("Result 1: %s\n", result1 ? result1 : "NULL");
+    printf("Result 2: %s\n", result2 ? result2 : "NULL");
 	printf("\n");
 	printf("\n");
 	printf("------------------------------ATOI----------------------");
@@ -198,7 +203,4 @@ int	main(void)
 	printf("%d\nft:", ft_atoi("fdgdsfg57654"));//blanco
 	printf("%d\nft:", ft_atoi("1  55510"));// solo el 1
 	printf("%d\nft:", ft_atoi(""));
-
-
 }
-

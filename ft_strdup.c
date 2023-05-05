@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 21:33:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/05 11:10:08 by marierau         ###   ########.fr       */
+/*   Created: 2023/05/05 10:03:24 by marierau          #+#    #+#             */
+/*   Updated: 2023/05/05 11:56:18 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmbrels, size_t elssize)
+char	*ft_strdup(const char *sorg)
 {
-	void	*dest;
+	size_t	len;
+	char	*sdup;
 
-	dest = malloc(elssize * nmbrels);
-	if (!dest)
-	{
+	len = ft_strlen (sorg) + 1;
+	sdup = malloc (len);
+	if (!sorg || !sdup)
 		return (NULL);
-	}
-	ft_bzero(dest, nmbrels * elssize);
-	return (dest);
+	else
+		ft_memcpy (sdup, sorg, len);
+	return (sdup);
 }
