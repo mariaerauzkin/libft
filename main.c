@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/05 11:12:23 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:17:37 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@
 
 int	main(void)
 {
-	int	a;
+/* 	int	a;
 	int	b;
 	int	c;
 	int	d;
 	int	e;
 	int	x; //esto es lo que vamos a buscar en el txt
 	char *str;
-	char	txt [20] = "Mola";
-	char	txt1 [20] = "mola";
+	char	txt [20] = "Molaaaa";
+	char	txt1 [20] = "Mazo";
 	char	txt2 [20] = "molar";
 	int		result;
+
 	char	big[] = "Esto es 42 Urduliz, may the 4th be with U";
     char	little1[] = "42";
     char	little2[] = "may";
@@ -127,14 +128,22 @@ int	main(void)
 	printf("\n");
 	printf("\nNE COMPREND PAS");
 	printf("\n");
-	printf("\n");
-	printf("-------------------------------STRLCAT-----------------------NE COMPREND PAS--");
-	printf("\n");
-	printf("\n");
-	printf("\nIem du tout");
+	printf("\n"); */
+	printf("-------------------------------STRLCAT-----------------------");
 	printf("\n");
 	printf("\n");
-	printf("-------------------------------TOLOWER----------------------");
+	char	txt10 [20] = "Molar";
+	char	txt11 [20] = "Mazo";
+	size_t	destsize = sizeof(txt10);
+	size_t	resultcat;
+	resultcat = ft_strlcat (txt10, txt11, destsize);
+	printf("Destino : %s\n", txt10);
+	printf("nº char : %zu\n", destsize);
+	printf ("Fx original: %zu\n", strlcat (txt10, txt11, destsize));
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	/* printf("-------------------------------TOLOWER----------------------");
 	printf("\n");
 	printf("\n");
 	printf("\nM: %c", ft_tolower(a));
@@ -203,4 +212,23 @@ int	main(void)
 	printf("%d\nft:", ft_atoi("fdgdsfg57654"));//blanco
 	printf("%d\nft:", ft_atoi("1  55510"));// solo el 1
 	printf("%d\nft:", ft_atoi(""));
-}
+	printf("------------------------------CALLOC----------------------");
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	printf("------------------------------FT_SUBSTR----------------------");
+	printf("\n");
+	printf("\n");
+	char *substr1 = ft_substr(str, 2, 4); 
+	char *substr2 = ft_substr(str, 14, 15); 
+	printf("Cadena original: %s\n", str);
+    printf("Subcadena 1: %s\n", substr1);
+    printf("Subcadena 2: %s\n", substr2);
+    free(substr1);
+    free(substr2);
+	printf("\n"); */
+} 
+ 
+
+ 

@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:13:55 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/04 16:54:01 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:59:33 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,23 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	i2;
-	size_t	i3;
-	size_t	res;
+	size_t	inddst;
+	size_t	indsrc;
+	size_t	ind;
+	size_t	lensrc;
 
-	i = 0;
-	i2 = 0;
-	res = 0;
-	while (src[res] != '\0')
-		res++;
-	while (dst[i] != '\0')
-		i++;
-	i3 = i;
-	if (dstsize > res + i)
-		dstsize = res + i + 1;
-	while (src[i2] != '\0' && i < dstsize - 1 && dstsize > 0)
-		dst[i++] = src[i2++];
-	dst[i] = '\0';
-	if (dstsize + res > res + i3)
-		return (res + i3);
-	return (res + dstsize);
+	inddst = 0;
+	indsrc = 0;
+	lensrc = ft_strlen(src);
+	while (dst[inddst] != '\0')
+		inddst++;
+	ind = inddst;
+	if (dstsize > lensrc + inddst)
+		dstsize = lensrc + inddst + 1;
+	while (src[indsrc] != '\0' && inddst < dstsize - 1 && dstsize > 0)
+		dst[inddst++] = src[indsrc++];
+	dst[inddst] = '\0';
+	if (dstsize + lensrc > lensrc + ind)
+		return (lensrc + ind);
+	return (lensrc + dstsize);
 }
