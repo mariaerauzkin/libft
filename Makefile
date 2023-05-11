@@ -6,7 +6,7 @@
 #    By: marierau <marierau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 11:26:24 by marierau          #+#    #+#              #
-#    Updated: 2023/05/10 15:48:47 by marierau         ###   ########.fr        #
+#    Updated: 2023/05/11 15:06:50 by marierau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,9 @@ SRCS =	ft_isalnum.c \
 		ft_strdup.c \
 		ft_substr.c \
 		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
 
 OBJS = ${SRCS:.c=.o}
 

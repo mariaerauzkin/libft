@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 16:40:25 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/11 15:03:31 by marierau         ###   ########.fr       */
+/*   Created: 2023/05/11 12:42:29 by marierau          #+#    #+#             */
+/*   Updated: 2023/05/11 13:00:26 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	ind;
+	char *str;
 
-	ind = 0;
-	while (str[ind] != '\0')
-	{
-		ind++;
-	}
-	return (ind);
+	str = "0123456789";
+	if(n > '9')
+		ft_putnbr_fd(n/10);
+	write(fd, &str[n%10], 1);
 }

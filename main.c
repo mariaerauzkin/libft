@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/10 14:17:37 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/11 13:38:53 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
+#include <fcntl.h>
 
 int	main(void)
 {
-/* 	int	a;
+/* /	int	a;
 	int	b;
 	int	c;
 	int	d;
@@ -31,11 +32,7 @@ int	main(void)
 	char	txt2 [20] = "molar";
 	int		result;
 
-	char	big[] = "Esto es 42 Urduliz, may the 4th be with U";
-    char	little1[] = "42";
-    char	little2[] = "may";
-    char	*result1;
-    char	*result2;
+	
 	
 	str = "42 Urduliz 42";
 	a = 'M';
@@ -135,14 +132,13 @@ int	main(void)
 	char	txt10 [20] = "Molar";
 	char	txt11 [20] = "Mazo";
 	size_t	destsize = sizeof(txt10);
-	size_t	resultcat;
-	resultcat = ft_strlcat (txt10, txt11, destsize);
 	printf("Destino : %s\n", txt10);
-	printf("nº char : %zu\n", destsize);
-	printf ("Fx original: %zu\n", strlcat (txt10, txt11, destsize));
+	printf("nº char : %zu\n", ft_strlcat (txt10, txt11, destsize));
+	char	txt12 [20] = "Molar";
+	printf ("Fx original: %zu\n", strlcat (txt12, txt11, destsize));
 	printf("\n");
 	printf("\n");
-	printf("\n");
+	printf("\n"); 
 	/* printf("-------------------------------TOLOWER----------------------");
 	printf("\n");
 	printf("\n");
@@ -198,13 +194,18 @@ int	main(void)
 	printf("------------------------------STRNSTR----------------------");
 	printf("\n");
 	printf("\n");
-	result1 = ft_strnstr(big, little1, sizeof(big));
-    result2 = ft_strnstr(big, little2, sizeof(big));
-    printf("Result 1: %s\n", result1 ? result1 : "NULL");
-    printf("Result 2: %s\n", result2 ? result2 : "NULL");
+	char	big[] = "Esto es 42 Urduliz, may the 4th be with U";
+    char	little1[] = "Maria";
+    char	little2[] = "42";
+    char	*result20;
+    char	*result201;
+	result20 = ft_strnstr(big, little1, sizeof(big));
+    result201 = ft_strnstr(big, little2, sizeof(big));
+    printf("Result 1: %s\n", result20 ? result20 : "NULL");
+    printf("Result 2: %s\n", result201 ? result201 : "NULL");
 	printf("\n");
-	printf("\n");
-	printf("------------------------------ATOI----------------------");
+	printf("\n"); */
+/* 	printf("------------------------------ATOI----------------------");
 	printf("%d\nft:", ft_atoi(" -2147483648"));
 	printf("%d\nft:", ft_atoi(" 2147483647"));
 	printf("%d\nft:", ft_atoi(" ---2"));
@@ -227,8 +228,32 @@ int	main(void)
     printf("Subcadena 2: %s\n", substr2);
     free(substr1);
     free(substr2);
+	printf("\n");  */
+/* 	printf("------------------------------FT_PUTCHAR_FD----------------------");
+	printf("\n");
+	printf("\n");
+	int fd;
+	char c = 'a';
+	fd = open("putchar_fd.txt", O_CREAT | O_WRONLY, 0777);
+	if (fd == -1)
+		perror("La cagaste");
+		return 1;
+	ft_putchar_fd(c, fd);
+	close(fd);
+	return 0;
+	printf("\n"); 
+	printf("------------------------------FT_PUTSTR_FD----------------------");
+	printf("\n");
+	printf("\n");
+	char	ptstr[] = "canta y no llores";
+	int	i = 0;
+	fd = open("putstr_fd.txt", O_CREAT | O_WRONLY, 0777);
+	if (fd == -1)	
+		perror ("La cagaste");
+		return 1;
+	ft_putstr_fd(ptstr, fd);
+	close(fd);
+	return 0;	
+	printf("\n");
 	printf("\n"); */
 } 
- 
-
- 
