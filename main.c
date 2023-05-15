@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:47:35 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/11 13:38:53 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/15 13:16:37 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int	main(void)
 {
-/* /	int	a;
+/* 	int	a;
 	int	b;
 	int	c;
 	int	d;
@@ -125,7 +125,7 @@ int	main(void)
 	printf("\n");
 	printf("\nNE COMPREND PAS");
 	printf("\n");
-	printf("\n"); */
+	printf("\n"); 
 	printf("-------------------------------STRLCAT-----------------------");
 	printf("\n");
 	printf("\n");
@@ -139,7 +139,7 @@ int	main(void)
 	printf("\n");
 	printf("\n");
 	printf("\n"); 
-	/* printf("-------------------------------TOLOWER----------------------");
+	printf("-------------------------------TOLOWER----------------------");
 	printf("\n");
 	printf("\n");
 	printf("\nM: %c", ft_tolower(a));
@@ -204,8 +204,8 @@ int	main(void)
     printf("Result 1: %s\n", result20 ? result20 : "NULL");
     printf("Result 2: %s\n", result201 ? result201 : "NULL");
 	printf("\n");
-	printf("\n"); */
-/* 	printf("------------------------------ATOI----------------------");
+	printf("\n"); 
+	printf("------------------------------ATOI----------------------");
 	printf("%d\nft:", ft_atoi(" -2147483648"));
 	printf("%d\nft:", ft_atoi(" 2147483647"));
 	printf("%d\nft:", ft_atoi(" ---2"));
@@ -229,7 +229,7 @@ int	main(void)
     free(substr1);
     free(substr2);
 	printf("\n");  */
-/* 	printf("------------------------------FT_PUTCHAR_FD----------------------");
+	printf("------------------------------FT_PUTCHAR_FD----------------------");
 	printf("\n");
 	printf("\n");
 	int fd;
@@ -255,5 +255,5 @@ int	main(void)
 	close(fd);
 	return 0;	
 	printf("\n");
-	printf("\n"); */
+	printf("\n"); 
 } 

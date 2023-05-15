@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 12:57:52 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/15 10:44:08 by marierau         ###   ########.fr       */
+/*   Created: 2023/05/15 13:03:52 by marierau          #+#    #+#             */
+/*   Updated: 2023/05/15 16:28:50 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*dstcpy;
-	char	*srccpy;
-	size_t	ind;
+	unsigned int	ind;
+	size_t			len;
+	char			*res;
 
-	ind = 0;
-	dstcpy = (char *)dst;
-	srccpy = (char *)src;
-	if (!dst && !src)
+	if (!s || !f)
 		return (NULL);
-	while (ind < len)
+	len = ft_strlen(s);
+	res = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!res)
+		return (NULL);
+	ind = 0;
+	while (s[ind])
 	{
-		dstcpy[ind] = srccpy[ind];
+		res[ind] = f(ind, s[ind]);
 		ind++;
 	}
-	return (dstcpy);
+	res[ind] = '\0';
+	return (res);
 }

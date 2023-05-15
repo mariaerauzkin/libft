@@ -6,48 +6,55 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 14:39:08 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/11 14:39:19 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/15 17:11:15 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-oid	ft_putchar(char a)
+static int	count_n(int n)
 {
-	write(1, &a, 1);
-}
+	int				count;
+	unsigned int	abs;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	count = 1;
+	if (n < 0)
 	{
-		ft_putchar ('-');
-		ft_putchar('2');
-		nb = 147483648;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb < 10)
-	{
-		ft_putchar(nb + 48);
-		return ;
+		abs = -n;
+		count++;
 	}
 	else
-		ft_putnbr(nb / 10);
-	ft_putnbr(nb % 10);
+		abs = n;
+	while (abs / 10 > 0)
+	{
+		count++;
+		abs = abs / 10;
+	}
+	return (count);
 }
-/*
-int	main(void)
+
+char	*ft_itoa(int n)
 {
-	ft_putnbr(-2147483648);
-	printf("\n");
-	ft_putnbr(-28);
-	printf("\n");
-	ft_putnbr(1648);
-	printf("\n");
-	return (0);
+	int				count;
+	char			*str;
+	unsigned int	abs;
+
+	count = count_n(n);
+	str = malloc(count + 1);
+	if (!str)
+		return (0);
+	str[count] = '\0';
+	if (n < 0)
+		abs = -n;
+	else
+		abs = n;
+	while (count > 0)
+	{
+		count--;
+		str[count] = (abs % 10) + 48;
+		abs = abs / 10;
+	}
+	if (n < 0)
+		str[0] = '-';
+	return (str);
 }
-*/

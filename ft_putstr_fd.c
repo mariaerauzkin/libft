@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 12:09:39 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/11 12:44:54 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:50:03 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int ind;
-	
+	int	ind;
+
 	ind = 0;
 	while (s[ind] != '\0')
 	{
-	write (fd, &s[ind], 1);
-	ind++;
-   }  
+		write (fd, &s[ind], 1);
+		ind++;
+	}
 }

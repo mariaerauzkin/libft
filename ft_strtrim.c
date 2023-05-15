@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:11:00 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/11 17:06:59 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/15 11:47:41 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,20 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char		*res;
-	size_t		len;
+	char	*res;
+	size_t	start;
+	size_t	end;
 
+	start = 0;
+	end = ft_strlen(s1) - 1;
 	if (!s1 || !set)
 		return (NULL);
-	while (ft_strchr(set, *s1) && s1 != '\0')
-		s1++;
-	len = ft_strlen(s1);
-    while (ft_strrchr(set, *s1) )
-	    len--;
+	while (ft_strchr(set, s1[start]))
+		start++;
+	while (ft_strrchr(set, s1[end]))
+		end--;
+	res = ft_substr(s1, start, end - start + 1);
 	if (!res)
 		return (NULL);
 	return (res);
-}
-
-
-int main ()
-{
-    char    s1[] = "maria patatafria culo caliente";
-    char    set[] = "culo";
-    char    *res = ft_strtrim(s1, set);
-
-    printf ("Original:%s\n", s1);
-    printf ("Recorte (set):%s\n", set);
-    printf ("Resultado aplicado:%s\n", res);  
-
-    free(res);
-    return (0);
 }
