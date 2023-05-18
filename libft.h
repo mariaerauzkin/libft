@@ -6,7 +6,7 @@
 /*   By: marierau <marierau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:50:13 by marierau          #+#    #+#             */
-/*   Updated: 2023/05/15 14:45:25 by marierau         ###   ########.fr       */
+/*   Updated: 2023/05/16 10:59:21 by marierau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char	*ft_strdup(const char *sorg);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *str1, char const *str2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
